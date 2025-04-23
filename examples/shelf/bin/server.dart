@@ -6,7 +6,7 @@ import 'package:shelf/shelf_io.dart' as shelf_io;
 void main() async {
   final handler =
       const Pipeline().addMiddleware(logRequests()).addHandler(_echoRequest);
-
+  print('Hello');
   final server = await shelf_io.serve(
     handler,
     InternetAddress.anyIPv4,
